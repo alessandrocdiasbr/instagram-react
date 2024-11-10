@@ -1,6 +1,6 @@
 import React from "react";
-import Stories from "./Stories";
-import Posts from "./Posts";
+import Stories from "./Stories/Stories";
+import Posts from "./Posts/Posts";
 import SideBar from "./SideBar";
 
 export default function Body() {

@@ -1,29 +1,6 @@
 import React, { useState } from "react";
 
-export default function Posts() {
-    const postsData = [
-        {
-            usuario: { nome: "meowed", imagem: "assets/meowed.svg" },
-            conteudo: { nome: "gato-telefone", imagem: "assets/gato-telefone.svg" },
-            curtidas: { nome: "respondeai", imagem: "assets/respondeai.svg", total: 101523 }
-        },
-        {
-            usuario: { nome: "barked", imagem: "assets/barked.svg" },
-            conteudo: { nome: "dog", imagem: "assets/dog.svg" },
-            curtidas: { nome: "respondeai", imagem: "assets/respondeai.svg", total: 99159 }
-        }
-    ];
-
-    return (
-        <div className="posts">
-            {postsData.map((post, index) => (
-                <Post key={index} post={post} />
-            ))}
-        </div>
-    );
-}
-
-function Post({ post }) {
+export default function Post({ post }) {
     const [salvo, setSalvo] = useState(false);
     const [curtido, setCurtido] = useState(false);
     const [totalCurtidas, setTotalCurtidas] = useState(post.curtidas.total);
