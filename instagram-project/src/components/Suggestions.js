@@ -1,6 +1,8 @@
 import React from "react";
+import SuggestionsList from "./SuggestionsList";
 
 export default function Suggestions() {
+ 
     const suggestions = [
         { nome: "bad.vibes.memes", imagem: "assets/bad.vibes.memes.svg", razao: "Segue você" },
         { nome: "chibirdart", imagem: "assets/chibirdart.svg", razao: "Segue você" },
@@ -16,20 +18,7 @@ export default function Suggestions() {
                 <div>Ver tudo</div>
             </div>
 
-            <ul>
-                {suggestions.map((suggestion, index) => (
-                    <li key={index} className="sugestao">
-                        <div className="usuario">
-                            <img src={suggestion.imagem} alt={suggestion.nome} />
-                            <div className="texto">
-                                <div className="nome">{suggestion.nome}</div>
-                                <div className="razao">{suggestion.razao}</div>
-                            </div>
-                        </div>
-                        <div className="seguir">Seguir</div>
-                    </li>
-                ))}
-            </ul>
+            <SuggestionsList suggestions={suggestions} />
 
             <div className="links">
                 Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma

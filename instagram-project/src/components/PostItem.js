@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Post({ post }) {
+export default function PostItem({ post }) {
     const [salvo, setSalvo] = useState(false);
     const [curtido, setCurtido] = useState(false);
     const [totalCurtidas, setTotalCurtidas] = useState(post.curtidas.total);

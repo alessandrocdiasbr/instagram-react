@@ -1,6 +1,6 @@
 import React from "react";
 import User from "./User";
-import Suggestions from "./Suggestions";
+import Suggestions from "./components/Suggestions";
 
 export default function SideBar() {
     return (

@@ -1,4 +1,5 @@
-import Post from './Post';
+import React from "react";
+import PostItem from "./PostItem";
 
 export default function Posts() {
     const postsData = [
@@ -16,13 +17,15 @@ export default function Posts() {
             usuario: { nome: "razoesparaacreditar", imagem: "assets/razoesparaacreditar.svg" },
             conteudo: { nome: "papagaio", imagem: "assets/papagaio.png" },
             curtidas: { nome: "respondeai", imagem: "assets/filomoderna.svg", total: 52039 }
-        }
+        },
+     
     ];
 
     return (
-        <div className="posts">
-            {postsData.map((post, index) => (
-                <Post key={index} post={post} />
+        <div className="posts-container">
+            
+            {postsData.slice(0, 3).map((post, index) => (
+                <PostItem key={index} post={post} />
             ))}
         </div>
     );

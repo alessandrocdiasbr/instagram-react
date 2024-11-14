@@ -1,8 +1,8 @@
-import React from "react";
-import Story from './Story';
+import React from 'react';
+import StoryItem from './StoryItem';
 
-export default function Stories() {
-    const stories = [
+function Story() {
+  const stories = [
         { nome: "9gag", imagem: "assets/9gag.svg" },
         { nome: "meowed", imagem: "assets/meowed.svg" },
         { nome: "barked", imagem: "assets/barked.svg" },
@@ -15,9 +15,11 @@ export default function Stories() {
 
     return (
         <ul className="stories">
-            {stories.map((story, index) => (
-                <Story key={index} story={story} />
-            ))}
+          {stories.map((story, index) => (
+            <StoryItem key={index} story={story} />
+          ))}
         </ul>
-    );
+      );
 }
+    
+ export default Story;
